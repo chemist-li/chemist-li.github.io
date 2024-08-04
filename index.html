@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+		.choose_li{list-style: none; font-size: 1.125em;}
+		.question{font-size: 1.25em; margin-bottom: 16px;}
+        .answer{color: red;display: none;margin-top: 10px;}
+    </style>
+</head>
+	
+<body>
+	<!-- 示例：前3个问题和答案 -->
+	<div id="question1" class="question">1、--Where is Mr. Zhang?<br>--He is in the _______.</div>
+	<p class="content">A. teacher's reading room</p>
+	<p class="content">B. teachers' reading room</p>
+	<p class="content">C. teacher reading room</p>
+	<p class="content">D. teachers reading room</p>
+	<button onclick="showAnswer('answer1')">Reveal Answer</button><br>
+	<div id="answer1" class="answer">B<br>此题考察名词所有格，教师与阅览室之间属于从属关系。teacher's表示一个老师的，而teachers'表示多个老师共有的，因为teacher先加s再加'。此题教师阅览室显然不是独属于某一位教师的，所以排除A，而C、D不是所有格形式，故排除，因此此题选择B。</div><br>
+<!--====================================================-->
+	<div id="question2" class="question">2、This year, the most popular ________ hat is that kind.</div>
+	<p class="content">A. woman's</p>
+	<p class="content">B. womens'</p>
+	<p class="content">C. women's</p>
+	<p class="content">D. womans'</p>
+	<button onclick="showAnswer('answer2')">Reveal Answer</button><br>
+	<div id="answer2" class="answer">C<br>在英文中，当提到一个类别或群体的共同属性时，应用复数形式＋其相应所有格进行修饰。women's表示女性的，这里表示女性帽子，而不是某个特定女性的帽子。woman's可能被误解为某一特定女人的帽子。因此此题选择C。</div><br>
+<!--====================================================-->
+	<div id="question3" class="question">3、Could you give me ________?</div>
+	<p>A. some advice</p>
+	<p>B. an advice</p>
+	<p>C. any advice</p>
+	<p>D. some advices</p>
+	<button onclick="showAnswer('answer3')">Reveal Answer</button><br>
+	<div id="answer3" class="answer">A<br>此题考查some和any的用法。some通常用于肯定句，any通常用于否定句、疑问句。而当表示请求/建议某人时应用some，此时some则表示希望得到对方肯定的回答，some/any既可以修饰C.N.也可以修饰U.N.，advice为U.N.因此排除D。综上所述，本题选择A。</div><br>
+<!--====================================================-->
+	<div id="question4" class="question">4、________  interesting work it is to teach children!</div>
+	<p>A. How</p>
+	<p>B. How an</p>
+	<p>C. What</p>
+	<p>D. What an</p>
+	<button onclick="showAnswer('answer4')">Reveal Answer</button><br>
+	<div id="answer4" class="answer">C<br>此题考察感叹句。感叹句有五种句型，分别是：<br>1、What + adj. + U.N/C.N.Pl.(+ 主 + 谓)!<br>2、What a/an + adj. + C.N.单数(+ 主 + 谓)!<br>3、How + adj. + a/an + C.N.单数(+ 主 + 谓)!<br>4、How + adj./adv. + 主 + 谓!<br>5、How + 主 + 谓!<br>结合上述句型以及work为不可数名词后，可以得出答案选择C。</div><br>
+<!--====================================================-->
+	<script>
+		function showAnswer(answerId) {
+			var answerDiv = document.getElementById(answerId);
+			if (answerDiv.style.display === 'block') {
+				answerDiv.style.display = 'none';
+			} else {
+				answerDiv.style.display = 'block';
+			}
+		}
+	</script>
+</body>
+</html>
